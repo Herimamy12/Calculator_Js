@@ -1,13 +1,55 @@
+<!-- *********************************************************************** -->
+<!--                                                                         -->
+<!--                                                      :::      ::::::::  -->
+<!-- index.html                                         :+:      :+:    :+:  -->
+<!--                                                  +:+ +:+         +:+    -->
+<!-- By: nherimam <nherimam@student.42antananarivo  +#+  +:+       +#+       -->
+<!--                                              +#+#+#+#+#+   +#+          -->
+<!-- Created: 2024/10/11 19:07:27 by nherimam          #+#    #+#            -->
+<!-- Updated: 2024/10/11 19:07:35 by nherimam         ###   ########.fr      -->
+<!--                                                                         -->
+<!-- *********************************************************************** -->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice Améliorée</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<h1>Good</h1>
-	<script src="script.js"></script>
+    <div class="calculator">
+        <h1 style="font-size: 24px; margin-bottom: 10px; text-align: center;">Calculatrice</h1>
+        <input type="text" id="result" disabled placeholder="0">
+        <div class="button-container">
+            <button onclick="appendToResult('*')">*</button>
+            <button onclick="appendToResult('**')">^</button>
+            <button onclick="appendToResult('/')">/</button>
+            <button class="clear-button" onclick="clearResult()">C</button>
+
+            <button onclick="appendToResult('7')">7</button>
+            <button onclick="appendToResult('8')">8</button>
+            <button onclick="appendToResult('9')">9</button>
+            <button onclick="appendToResult('+')">+</button>
+
+            <button onclick="appendToResult('4')">4</button>
+            <button onclick="appendToResult('5')">5</button>
+            <button onclick="appendToResult('6')">6</button>
+            <button onclick="appendToResult('-')">-</button>
+
+            <button onclick="appendToResult('1')">1</button>
+            <button onclick="appendToResult('2')">2</button>
+            <button onclick="appendToResult('3')">3</button>
+            <button></button>
+
+            <button onclick="appendToResult('0')">0</button>
+            <button onclick="appendToResult('.')">.</button>
+            <button class="history-button" onclick="toggleHistory()">His</button>
+            <button class="equal-button" onclick="calculateResult()">=</button>
+        </div>
+        <div id="history" class="history" style="display:none;"></div>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
